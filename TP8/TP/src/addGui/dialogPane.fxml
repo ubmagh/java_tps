@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import com.sun.javafx.charts.Legend?>
+<DialogPane fx:id="dialogPane" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8Zc²" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addGui.DialogPaneController">
+   <content>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="500.0">
+         <children>
+            <GridPane alignment="TOP_RIGHT" maxWidth="400.0" prefHeight="280.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="99.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="41.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="261.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="80.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" text="Nom  : ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="108.0" layoutY="14.0" text="Prénom  : " GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="89.0" layoutY="60.0" text="email  : " GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="104.0" layoutY="100.0" text="Téléphone  : " GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="108.0" layoutY="20.0" text="Fonction  : " GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="108.0" layoutY="20.0" text="Adresse  : " GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField id="nom" fx:id="nom" alignment="CENTER" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Calibri Light" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="prenom" fx:id="prenom" alignment="CENTER" layoutX="187.0" layoutY="18.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri Light" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="email" fx:id="email" alignment="CENTER" layoutX="187.0" layoutY="18.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Calibri Light" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="tel" fx:id="tel" alignment="CENTER" layoutX="187.0" layoutY="18.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Calibri Light" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fonction" fx:id="fonction" alignment="CENTER" layoutX="187.0" layoutY="138.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Calibri Light" size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextArea id="adresse" fx:id="adresse" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Calibri Light" size="13.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin>
+                  </TextArea>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </content>
+</DialogPane>

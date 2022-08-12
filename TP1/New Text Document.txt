@@ -1,0 +1,18 @@
+Sur casting ( variable de taille grand => type de taille peite ) : Casting (implicite)
+Sous casting ( inverse) : Casing Explicite obligatoirmenet
+
+
+Commentaire de documentation ; /** 
+*
+*
+**/ => when generating docs using javadox
+
+
+Délcarer un tableau : >float []notes (OR) >float notes[]
+
+
+String object is emutable => unchangeable, to modify a string, a copy is created ==> else use StringBuilder that provides methodes to edit the stringVar // There is also StringBuffer class that is Thread safe than String Builder ( when many threads are using same variable, in StringBuffer there is a synchronous mechanisme to allow one thread to use the variable while blocking other threads )
+
+
+
+

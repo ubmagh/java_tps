@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainGui.MainGuiController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+         </BorderPane.margin>
+         <children>
+            <Button id="addBtn" fx:id="addBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addPerson" text="Ajouter ...">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button id="deleteBtn" fx:id="deleteBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="17.0" mnemonicParsing="false" onAction="#deletePerson" text="Supprimer">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+            <TextField id="searchTF" fx:id="searchTF" alignment="CENTER" prefHeight="35.0" prefWidth="240.0" onKeyReleased="#Search" promptText="Rechercher">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView id="tableView" fx:id="tableView" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <placeholder>
+              <Label> Aucune personne trouvée </Label>
+          </placeholder>
+          <columns>
+            <TableColumn id="nomCol" fx:id="nomCol" editable="false" prefWidth="150.0" text="Nom" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="nom" />
+                </cellValueFactory>
+            </TableColumn>
+              <TableColumn id="prenomCol" fx:id="prenomCol" minWidth="0.0" prefWidth="184.0" text="Prénom">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="prenom" />
+                  </cellValueFactory>
+              </TableColumn>
+            <TableColumn id="telCol" fx:id="telCol" editable="false" prefWidth="146.0" text="Tél" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="tel" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="emailCol" fx:id="emailCol" editable="false" prefWidth="143.0" text="Email" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="fonctionCol" fx:id="fonctionCol" editable="false" prefWidth="140.0" text="Fonction" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="fonction" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>

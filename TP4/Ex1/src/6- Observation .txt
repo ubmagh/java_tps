@@ -1,0 +1,6 @@
+
+
+6--> Que constatez-vous ?
+
+
+#-> Je constate que chaque fois on execute le programme, les threads s'execute sans ordre, aléatoirement.

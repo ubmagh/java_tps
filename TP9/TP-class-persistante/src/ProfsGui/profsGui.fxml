@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfsGui.ProfsGuiController">
+   <top>
+      <VBox alignment="CENTER_LEFT" prefHeight="80.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="8.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="returnBtn" mnemonicParsing="false" onAction="#returnAction" styleClass="returnBtn" text="Retourner" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="150.0" text="Choisir le département :  ">
+                     <HBox.margin>
+                        <Insets left="440.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox id="departsCmBox" fx:id="departementCombo" onAction="#changeDepartement" prefWidth="300.0" styleClass="departsCmBox">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="searchTextfield" alignment="CENTER" onKeyReleased="#doSearch" prefWidth="340.0" promptText="Chercher un professeur...">
+                     <HBox.margin>
+                        <Insets right="415.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addProf" text="Ajouter">
+                     <styleClass>
+                        <String fx:value="controlBtn" />
+                        <String fx:value="add" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="editBtn" mnemonicParsing="false" onAction="#editProf" text="Modifier">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="controlBtn" />
+                        <String fx:value="edit" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteProf" text="Supprimer">
+                     <styleClass>
+                        <String fx:value="controlBtn" />
+                        <String fx:value="delete" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <placeholder>
+            <Label> Aucun professeur trouvé </Label>
+         </placeholder>
+         <columns>
+            <TableColumn id="idCol" fx:id="idCol" editable="false" minWidth="50.0" prefWidth="50.0" resizable="true" styleClass="column" text="ID">
+               <cellValueFactory>
+                  <PropertyValueFactory property="id_prof" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="nomCol" fx:id="nomCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="Nom">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nom" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="prenomCol" fx:id="prenomCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="Prenom">
+               <cellValueFactory>
+                  <PropertyValueFactory property="prenom" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="cinCol" fx:id="cinCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="CIN">
+               <cellValueFactory>
+                  <PropertyValueFactory property="cin" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="teleCol" fx:id="teleCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="Tél">
+               <cellValueFactory>
+                  <PropertyValueFactory property="telephone" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="emailCol" fx:id="emailCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="Email">
+               <cellValueFactory>
+                  <PropertyValueFactory property="email" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="daterecCol" fx:id="daterecCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="Date recrut.">
+               <cellValueFactory>
+                  <PropertyValueFactory property="date_recrutement" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="departCol" fx:id="departCol" editable="false" maxWidth="650.0" minWidth="100.0" prefWidth="133.0" resizable="true" styleClass="column" text="Département">
+               <cellValueFactory>
+                  <PropertyValueFactory property="departemenetNom" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>

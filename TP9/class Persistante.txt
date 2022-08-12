@@ -1,0 +1,1 @@
+class persistante => qui a les objets correspodant à des lignes dans la BD (ORM) mapped

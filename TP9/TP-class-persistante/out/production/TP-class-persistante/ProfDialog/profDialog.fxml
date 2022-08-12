@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<DialogPane fx:id="dialogPane" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfDialog.ProfDialogController">
+   <content>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="240.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Nom :  " textAlignment="CENTER" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="71.0" layoutY="34.0" text="Prenom :  " textAlignment="CENTER" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="56.0" layoutY="79.0" text="CIN :   " textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="56.0" layoutY="79.0" text="Email :  " textAlignment="CENTER" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="71.0" layoutY="34.0" text="Téléphone :  " textAlignment="CENTER" GridPane.rowIndex="4" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="71.0" layoutY="34.0" text="Adresse :  " textAlignment="CENTER" GridPane.rowIndex="5" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="71.0" layoutY="34.0" text="Date de récrut. :  " textAlignment="CENTER" GridPane.rowIndex="6" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="71.0" layoutY="34.0" text="Département :  " textAlignment="CENTER" GridPane.rowIndex="7" />
+            <TextField fx:id="nomField" alignment="CENTER" GridPane.columnIndex="1" />
+            <TextField fx:id="prenomField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="cinField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="emailField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="telField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="adresseField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="daterecField" prefWidth="245.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER" onAction="#onDaterecrChange" />
+            <ComboBox fx:id="departementComboBox" prefWidth="245.0" GridPane.columnIndex="1" GridPane.rowIndex="7" onAction="#onDepartementChange" />
+         </children>
+      </GridPane>
+   </content>
+</DialogPane>

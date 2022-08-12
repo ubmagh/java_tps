@@ -1,0 +1,21 @@
+.buttonGrp1 {
+    -fx-border-radius: 20px;
+    -fx-padding: 20px;
+    -fx-font-family: "JetBrains Mono Medium";
+    -fx-font-size: 18px;
+}
+
+.Btn3{
+    -fx-border-radius: 20px;
+    -fx-padding: 15px;
+    -fx-font-family: "JetBrains Mono Medium";
+    -fx-font-size: 14px;
+}
+
+.errorMessage{
+    -fx-font-family: "JetBrains Mono Medium";
+    -fx-font-size: 13px;
+    -fx-color-label-visible: red;
+    -fx-text-fill: red;
+    -fx-font-weight: 400;
+}

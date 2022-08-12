@@ -1,0 +1,25 @@
+.controlBtn{
+    -fx-padding: 7px 12px;
+    -fx-font-size: 13px;
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+}
+
+.controlBtn.add{
+    -fx-text-fill: green;
+}
+.controlBtn.delete{
+    -fx-text-fill: red;
+}
+.controlBtn.edit{
+    -fx-text-fill: blue;
+}
+
+.column {
+    -fx-alignment: CENTER;
+}
+
+.returnBtn{
+    -fx-font-weight: bolder;
+    -fx-padding: 8px 14px;
+}
